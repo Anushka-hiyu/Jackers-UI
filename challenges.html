@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jackers: Challenges</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cards.css">
+<style>
+:root{
+  --bg:#050505;
+  --panel:#0b0b0c;
+  --red:#ff2b2b;
+  --muted:#b6b6b6;
+  --glass: rgba(255,255,255,0.03);
+  --glow: 0 0 20px rgba(255,43,43,0.8), 0 0 60px rgba(255,20,20,0.12);
+}
+
+body{
+  margin:0;
+  background:linear-gradient(180deg,#030304 0%, #0c0c11 75%);
+  color:#fff;
+  font-family:'Montserrat',sans-serif;
+}
+
+.app{
+  max-width:900px;
+  margin:0 auto;
+  padding:24px;
+}
+
+/* HEADER */
+.header{
+  text-align:center;
+  margin-top:14px;
+}
+
+.header h1{
+  font-family:'Orbitron';
+  letter-spacing:1.5px;
+  font-size:22px;
+}
+
+/* CHALLENGE CARD */
+.challenge{
+  margin-top:24px;
+  padding:20px;
+  background:var(--glass);
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,0.05);
+  box-shadow:var(--glow);
+}
+
+.challenge h3{
+  margin:0;
+  font-family:'Orbitron';
+  font-size:18px;
+}
+
+.challenge p{
+  font-size:13px;
+  margin-top:6px;
+  color:var(--muted);
+}
+
+.badge{
+  display:inline-block;
+  margin-top:8px;
+  padding:6px 10px;
+  background:rgba(255,255,255,0.06);
+  font-size:11px;
+  border-radius:8px;
+}
+
+.progress{
+  margin-top:14px;
+}
+
+.bar{
+  width:100%;
+  height:10px;
+  background:#222;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.fill{
+  height:100%;
+  background:linear-gradient(90deg,var(--red),#ff5555);
+}
+
+.btn{
+  margin-top:14px;
+  width:100%;
+  padding:12px;
+  border:none;
+  background:linear-gradient(90deg,var(--red),#ff5858);
+  color:#fff;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* LEADERBOARD CARD */
+.board{
+  margin-top:28px;
+  padding:20px;
+  background:var(--glass);
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+.board h2{
+  margin:0;
+  font-family:'Orbitron';
+  font-size:18px;
+  margin-bottom:14px;
+}
+
+.row{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.row:last-child{
+  border-bottom:none;
+}
+
+.name{
+  font-size:14px;
+}
+
+.score{
+  font-size:14px;
+  font-family:'Orbitron';
+  color:var(--red);
+}
+
+/* NAV */
+.navbar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:65px;
+  backdrop-filter:blur(8px);
+  background:rgba(0,0,0,0.55);
+  border-top:1px solid rgba(255,255,255,0.06);
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.nav-item{
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+  cursor:pointer;
+}
+
+.nav-item:hover{
+  color:var(--red);
+}
+
+.nav-item.active{
+  color:var(--red);
+}
+</style>
+
+</head>
+<body>
+
+  <div class="vortex"></div>
+
+<div class="app">
+
+  <!-- HEADER PART -->
+  <div class="header">
+    <h1>WEEKLY CHALLENGES</h1>
+    <p style="margin-top:4px; color:var(--muted); font-size:13px;">Complete tasks • Earn Jokers • Build discipline</p>
+  </div>
+
+  <!-- CHALLENGE 1 WALA PART IDHR -->
+  <div class="challenge">
+    <h3>No Spend Monday</h3>
+    <p>Avoid all non-essential payments for one day to boost discipline.</p>
+    <span class="badge">+120 Jokers</span>
+
+    <div class="progress">
+      <div class="bar"><div class="fill" style="width: 60%;"></div></div>
+    </div>
+
+    <button class="btn">Continue</button>
+  </div>
+
+  <!-- CHALLENGE 2 WALA PART IDHR -->
+  <div class="challenge">
+    <h3>₹100 Saving Streak</h3>
+    <p>Save ₹100 every day for 7 days straight.</p>
+    <span class="badge">+200 Jokers</span>
+
+    <div class="progress">
+      <div class="bar"><div class="fill" style="width: 35%;"></div></div>
+    </div>
+
+    <button class="btn">Join Challenge</button>
+  </div>
+
+  <!-- CHALLENGE 3 -->
+  <div class="challenge">
+    <h3>Impulse-Free 48 Hours</h3>
+    <p>No food delivery, no random shopping for 2 days.</p>
+    <span class="badge">+180 Jokers</span>
+
+    <div class="progress">
+      <div class="bar"><div class="fill" style="width: 10%;"></div></div>
+    </div>
+
+    <button class="btn">Join Challenge</button>
+  </div>
+
+  <!-- LEADERBOARD IDHR -->
+  <div class="board">
+    <h2>Team Leaderboard</h2>
+
+    <div class="row">
+      <div class="name">You</div>
+      <div class="score">1280</div>
+    </div>
+
+    <div class="row">
+      <div class="name">Rushda</div>
+      <div class="score">1180</div>
+    </div>
+
+    <div class="row">
+      <div class="name">Siddhant</div>
+      <div class="score">650</div>
+    </div>
+
+    <div class="row">
+      <div class="name">Irya</div>
+      <div class="score">440</div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- NAVIGATION LINKS -->
+<div class="navbar">
+  <div class="nav-item" onclick="location.href='home.html'">Home</div>
+  <div class="nav-item" onclick="location.href='suits.html'">Suits</div>
+  <div class="nav-item" onclick="location.href='jokers.html'">Jokers</div>
+  <div class="nav-item active" onclick="location.href='challenges.html'">Challenges</div>
+</div>
+
+<script src="cards.js"></script>
+<script>
+initFallingCards();
+</script>
+
+</body>
+</html>

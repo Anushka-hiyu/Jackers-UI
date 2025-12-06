@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jackers: Suit Identities</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="cards.css">
+<style>
+:root{
+  --bg:#050505;
+  --panel:#0b0b0c;
+  --red:#ff2b2b;
+  --muted:#b6b6b6;
+  --glass:rgba(255,255,255,0.03);
+  --glow:0 0 18px rgba(255,43,43,0.8),0 0 40px rgba(255,20,20,0.15);
+}
+
+body{
+  margin:0;
+  background:linear-gradient(180deg,#030304 0%, #0d0d12 75%);
+  color:#fff;
+  font-family:'Montserrat',sans-serif;
+}
+
+.app{
+  max-width:900px;
+  margin:0 auto;
+  padding:24px;
+}
+
+/* HEADER */
+.header{
+  text-align:center;
+  margin-top:18px;
+}
+
+.header h1{
+  font-family:'Orbitron';
+  font-size:22px;
+  letter-spacing:1.5px;
+}
+
+/* SUIT GRID */
+.grid{
+  margin-top:28px;
+  display:grid;
+  gap:20px;
+  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* SUIT CARD */
+.suit-card{
+  background:var(--glass);
+  border-radius:18px;
+  padding:24px;
+  border:1px solid rgba(255,255,255,0.05);
+  transition:0.4s;
+  position:relative;
+  cursor:pointer;
+}
+
+.suit-card:hover{
+  transform:translateY(-10px);
+  box-shadow:var(--glow);
+}
+
+.suit-symbol{
+  font-size:48px;
+  text-align:center;
+  color:var(--red);
+  margin-bottom:10px;
+}
+
+.suit-name{
+  text-align:center;
+  font-family:'Orbitron';
+  font-size:20px;
+  margin-bottom:8px;
+}
+
+.suit-desc{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.4;
+  text-align:center;
+}
+
+/* NAVIGATION BAR */
+.navbar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:65px;
+  backdrop-filter:blur(8px);
+  background:rgba(0,0,0,0.55);
+  border-top:1px solid rgba(255,255,255,0.06);
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.nav-item{
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+  cursor:pointer;
+}
+
+.nav-item:hover{
+  color:var(--red);
+}
+
+.nav-item.active{
+  color:var(--red);
+}
+
+</style>
+</head>
+
+<body>
+
+  <div class="vortex"></div>
+
+<div class="app">
+
+  <div class="header">
+    <h1>SUIT PERSONALITIES</h1>
+    <p style="color:var(--muted); font-size:13px; margin-top:4px;">
+      Your money behaviour decides your suit. Each suit reflects a unique financial personality.
+    </p>
+  </div>
+
+  <!-- SUIT GRID -->
+  <div class="grid">
+    
+    <!-- DIAMOND -->
+    <div class="suit-card">
+      <div class="suit-symbol">♦</div>
+      <div class="suit-name">Diamond</div>
+      <div class="suit-desc">
+        Disciplined • Strategic • Consistent  
+        <br>You save regularly, avoid impulses, and think long-term.
+      </div>
+    </div>
+
+    <!-- CLUB -->
+    <div class="suit-card">
+      <div class="suit-symbol">♣</div>
+      <div class="suit-name">Club</div>
+      <div class="suit-desc">
+        Balanced • Reliable • Steady  
+        <br>You spend smartly and save moderately. Good control with room to grow.
+      </div>
+    </div>
+
+    <!-- HEART -->
+    <div class="suit-card">
+      <div class="suit-symbol">♥</div>
+      <div class="suit-name">Heart</div>
+      <div class="suit-desc">
+        Emotional • Generous • Adaptive  
+        <br>You treat yourself often, but move toward healthier money habits.
+      </div>
+    </div>
+
+    <!-- SPADE -->
+    <div class="suit-card">
+      <div class="suit-symbol">♠</div>
+      <div class="suit-name">Spade</div>
+      <div class="suit-desc">
+        Impulsive • Risky • Unpredictable  
+        <br>You spend fast, act quick, and thrive under uncertainty. Challenges help you level up.
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- NAV -->
+<div class="navbar">
+  <div class="nav-item" onclick="location.href='home.html'">Home</div>
+  <div class="nav-item active" onclick="location.href='suits.html'">Suits</div>
+  <div class="nav-item" onclick="location.href='jokers.html'">Jokers</div>
+  <div class="nav-item" onclick="location.href='profile.html'">Profile</div>
+</div>
+
+<script src="cards.js"></script>
+<script>
+initFallingCards();
+</script>
+
+</body>
+</html>

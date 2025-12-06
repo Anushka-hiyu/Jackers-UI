@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jackers: Settings</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="cards.css">
+
+<style>
+:root{
+  --bg:#050505;
+  --panel:#0b0b0c;
+  --red:#ff2b2b;
+  --muted:#b6b6b6;
+  --glass:rgba(255,255,255,0.03);
+}
+
+body{
+  margin:0;
+  background:linear-gradient(180deg,#020203 0%, #0c0d11 80%);
+  color:#fff;
+  font-family:'Montserrat',sans-serif;
+}
+
+.app{
+  max-width:900px;
+  margin:0 auto;
+  padding:24px;
+}
+
+/* HEADER */
+.header h1{
+  text-align:center;
+  font-family:'Orbitron';
+  font-size:22px;
+  letter-spacing:1.5px;
+  margin-top:12px;
+}
+
+/* CARD STYLES */
+.card1{
+  background:var(--glass);
+  padding:20px;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,0.05);
+  margin-top:24px;
+}
+
+.card1 h2{
+  margin:0;
+  font-size:18px;
+  font-family:'Orbitron';
+}
+
+.card1 p{
+  margin-top:6px;
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.4;
+}
+
+/* TOGGLE */
+.toggle-box{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:18px;
+}
+
+.toggle{
+  width:50px;
+  height:24px;
+  background:#222;
+  border-radius:20px;
+  position:relative;
+  cursor:pointer;
+}
+
+.circle{
+  width:22px;
+  height:22px;
+  background:#fff;
+  border-radius:50%;
+  position:absolute;
+  top:1px;
+  left:2px;
+  transition:0.3s;
+}
+
+.toggle:hover .circle{
+  background:#ff2b2b;
+}
+
+/* VERSION INFO */
+.version{
+  margin-top:28px;
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* NAV */
+.navbar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:65px;
+  backdrop-filter:blur(8px);
+  background:rgba(0,0,0,0.55);
+  border-top:1px solid rgba(255,255,255,0.06);
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.nav-item{
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+  cursor:pointer;
+}
+
+.nav-item:hover{
+  color:var(--red);
+}
+
+.nav-item.active{
+  color:var(--red);
+}
+
+</style>
+</head>
+
+<body>
+
+  <div class="vortex"></div>
+
+<div class="app">
+
+  <div class="header">
+    <h1>SETTINGS & ABOUT</h1>
+  </div>
+
+  <!-- ABOUT OuR APP -->
+  <div class="card1">
+    <h2>About Jackers</h2>
+    <p>
+      Jackers is a gamified financial behaviour app that assigns users a unique Suit Identity based on real spending and saving patterns.  
+      Earn *Jokers*, complete challenges and build your financial discipline — the Gen Z way.
+    </p>
+  </div>
+
+  <!-- APPEARANCE -->
+  <div class="card1">
+    <h2>Appearance</h2>
+
+    <div class="toggle-box">
+      <span>Light Theme</span>
+      <div class="toggle">
+        <div class="circle"></div>
+      </div>
+    </div>
+
+    <div class="toggle-box">
+      <span>Glitch Effects</span>
+      <div class="toggle">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRIVACY -->
+  <div class="card1">
+    <h2>Privacy & Security</h2>
+    <p>
+      • No real financial info stored  
+      • No bank connection required  
+      • All suit assignments are behaviour-based  
+      • Fully demo-safe for ideathon  
+    </p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="card1">
+    <h2>Help & Support</h2>
+    <p>
+      • Email: jackersindia@gmail.com  
+      • Instagram: @jackersindia 
+      • Discord: Jackers HQ  
+    </p>
+  </div>
+
+  <div class="version">Version 1.0.0 • Jackers Prototype Build</div>
+
+</div>
+
+<!-- NAVIGATION -->
+<div class="navbar">
+  <div class="nav-item" onclick="location.href='home.html'">Home</div>
+  <div class="nav-item" onclick="location.href='suits.html'">Suits</div>
+  <div class="nav-item" onclick="location.href='jokers.html'">Jokers</div>
+  <div class="nav-item" onclick="location.href='profile.html'">Profile</div>
+</div>
+
+<script src="cards.js"></script>
+<script>
+initFallingCards();
+</script>
+
+</body>
+</html>

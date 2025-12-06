@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jackers: Jokers Wallet</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="cards.css">
+
+
+<style>
+:root{
+  --bg:#050505;
+  --red:#ff2b2b;
+  --panel:#0b0b0c;
+  --muted:#aaaaaa;
+  --glass: rgba(255,255,255,0.03);
+  --glow: 0 0 20px rgba(255,43,43,0.8), 0 0 60px rgba(255,43,43,0.15);
+}
+
+body{
+  margin:0;
+  background:linear-gradient(180deg,#040404 0%, #0c0c10 75%);
+  color:#fff;
+  font-family:'Montserrat',sans-serif;
+  overflow-x:hidden;
+}
+
+.app{
+  max-width:900px;
+  margin:0 auto;
+  padding:24px;
+}
+
+/* HEADER */
+.header{
+  text-align:center;
+  margin-top:10px;
+}
+
+.header h1{
+  font-family:'Orbitron';
+  letter-spacing:1.5px;
+  font-size:22px;
+}
+
+/* COIN SECTION */
+.coin-box{
+  margin:30px auto 10px auto;
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  background:radial-gradient(circle,#1b1b1b,#000);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow:var(--glow);
+  animation:spin 7s linear infinite;
+}
+
+.coin-box img{
+  width:140px;
+  opacity:0.92;
+}
+
+@keyframes spin{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
+}
+
+/* BALANCE */
+.balance{
+  text-align:center;
+  margin-top:18px;
+  font-family:'Orbitron';
+  font-size:26px;
+}
+
+.balance small{
+  display:block;
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* WALLET ACTIONS */
+.section-title{
+  margin-top:35px;
+  font-family:'Orbitron';
+  font-size:18px;
+  letter-spacing:1px;
+}
+
+.card1{
+  background:var(--glass);
+  border-radius:16px;
+  margin-top:14px;
+  padding:18px;
+  border:1px solid rgba(255,255,255,0.04);
+}
+
+.card1 h3{
+  margin:0;
+  font-family:'Orbitron';
+  font-size:16px;
+}
+
+.card1 p{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.redeem{
+  margin-top:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.redeem button{
+  background:linear-gradient(90deg,var(--red),#ff5151);
+  border:none;
+  padding:8px 15px;
+  color:#fff;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.badge{
+  padding:5px 10px;
+  font-size:11px;
+  background:rgba(255,255,255,0.06);
+  border-radius:8px;
+}
+
+/* NAVIGATION */
+.navbar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:65px;
+  backdrop-filter:blur(8px);
+  background:rgba(0,0,0,0.55);
+  border-top:1px solid rgba(255,255,255,0.06);
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.nav-item{
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.nav-item:hover{
+  color:var(--red);
+}
+
+.nav-item.active{
+  color:var(--red);
+}
+</style>
+</head>
+
+<body>
+
+<div class="vortex"></div>  
+
+<div class="app">
+
+  <div class="header">
+    <h1>JOKERS WALLET</h1>
+  </div>
+
+  <!-- SPINNING COIN -->
+  <div class="coin-box">
+    <img src="logo.png" alt="coin">
+  </div>
+
+  <!-- BALANCE -->
+  <div class="balance">
+    1,280 Jokers
+    <small>Your in-app currency balance</small>
+  </div>
+
+  <!-- EARN HISTORY -->
+  <div class="section-title">Earning Activity</div>
+
+  <div class="card1">
+    <h3>+120 Jokers</h3>
+    <p>Completed weekly challenge: “No Spend Monday”</p>
+  </div>
+
+  <div class="card1">
+    <h3>+300 Jokers</h3>
+    <p>Maintained saving streak for 30 days</p>
+  </div>
+
+  <div class="card1">
+    <h3>+50 Jokers</h3>
+    <p>Low impulse spending for 7 days</p>
+  </div>
+
+  <!-- REDEEM OFFERS -->
+  <div class="section-title">Redeem Rewards</div>
+
+  <div class="card1">
+    <h3>Flat ₹50 cashback</h3>
+    <p>Valid on food, shopping, or online payments.</p>
+    <div class="redeem">
+      <span class="badge">Costs 100 Jokers</span>
+      <button>Redeem</button>
+    </div>
+  </div>
+
+  <div class="card1">
+    <h3>Amazon Mini Voucher</h3>
+    <p>Instant digital redeem.</p>
+    <div class="redeem">
+      <span class="badge">Costs 250 Jokers</span>
+      <button>Redeem</button>
+    </div>
+  </div>
+
+  <div class="card1">
+    <h3>Suit Custom Badge</h3>
+    <p>Change the appearance of your suit icon.</p>
+    <div class="redeem">
+      <span class="badge">Costs 180 Jokers</span>
+      <button>Redeem</button>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="section-title">How Jokers Work</div>
+
+  <div class="card1">
+    <p>Jokers are earned based on:  
+    <br>• Savings  
+    <br>• Discipline  
+    <br>• Weekly challenges  
+    <br>• Low impulsive spending  
+    <br><br>Use them to unlock perks, customize suits, or gain rewards.</p>
+  </div>
+
+</div>
+
+<!-- NAVIGATION -->
+<div class="navbar">
+  <div class="nav-item" onclick="location.href='home.html'">Home</div>
+  <div class="nav-item" onclick="location.href='suits.html'">Suits</div>
+  <div class="nav-item active" onclick="location.href='jokers.html'">Jokers</div>
+  <div class="nav-item" onclick="location.href='profile.html'">Profile</div>
+</div>
+
+<script src="cards.js"></script>
+<script>
+initFallingCards();
+</script>
+
+</body>
+</html>
